@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-g.css">
+    <title>Gallery</title>
+</head>
+
+<body class="bod">
+    <div id="nav">
+        <div class="navrap">
+            <div class="logo">
+                <h1>Cafetune</h1>
+            </div>
+            <form class="search-bar">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit"><img src="searchicon.png" alt="Search"></button>
+            </form>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html" target="_blank">home</a></li>
+                    <li><a href="index.html#abou" target="_blank">about</a></li>
+                    <li><a href="gallery.html">gallery</a></li>
+                    <li><a href="iteam.html" target="_blank">iteams</a></li>
+                    <li><a href="contact.html" target="_blank">contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="imhd">Our Gallery</h2>
+        <div class="g-hd">Where Every Sip Meets a Story – Explore Our Café Moments!📸</div>
+        <div class="imgcontainer">
+            <div class="emj">
+                <img src="pic1.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic2.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic4.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic8.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic3.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic5.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic16.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic8.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic9.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic10.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic11.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic12.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic13.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic14.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic15.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic16.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic17.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic18.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic19.jpg" alt="image">
+            </div>
+            <div class="emj">
+                <img src="pic20.jpg" alt="image">
+            </div>
+
+        </div>
+   </div>
+  
+    <!--Chat Bot-->
+    <div class="chat-icon" onclick="toggleChat()">💬</div>
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">Cafe Chatbot</div>
+        <div class="chat-box" id="chatBox">
+            <p><b>Bot:</b> Hello! How can I assist you today?</p>
+            <div class="chat-options">
+                <button onclick="handleOption('menu')">View Menu</button>
+                <button onclick="handleOption('hours')">Opening Hours</button>
+                <button onclick="handleOption('location')">Location</button>
+                <button onclick="handleOption('contact')">Contact Info</button>
+            </div>
+        </div>
+    </div>
+    <!--Chat bot script-->
+    <script>
+        function toggleChat() {
+            let chatContainer = document.getElementById("chatContainer");
+            chatContainer.style.display = (chatContainer.style.display === "flex") ? "none" : "flex";
+        }
+
+        function handleOption(option) {
+            let chatBox = document.getElementById("chatBox");
+            let response = getBotResponse(option);
+            chatBox.innerHTML += `<p><b>You:</b> ${option}</p>`;
+            setTimeout(() => {
+                chatBox.innerHTML += `<p><b>Bot:</b> ${response}</p>`;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 500);
+        }
+
+        function getBotResponse(option) {
+            if (option === 'menu') return "Our menu includes Coffee, Tea, and Snacks!";
+            if (option === 'hours') return "We are open from 8 AM to 10 PM.";
+            if (option === 'location') return "We are located at XYZ Street, Kolkata.";
+            if (option === 'contact') return "You can call us at +91 9876543210.";
+            return "Sorry, I didn't understand that.";
+        }
+    </script>
+
+
+   <!--Footer Section-->
+   <div class="foot">
+    <div class="footrap">
+
+        <div class="fbox">
+            <h3>Links</h3>
+            <ul class="flink">
+                <li><a href="index.html" target="_blank">home</a></li>
+                <li><a href="#abou" target="_blank">about</a></li>
+                <li><a href="gallery.html">gallery</a></li>
+                <li><a href="iteam.html" target="_blank">iteams</a></li>
+                <li><a href="contact.html" target="_blank">contact us</a></li>
+            </ul>
+        </div>
+        <div class="fbox">
+            <div class="cnt">
+                <h3>Contact Us</h3>
+                <p>📍 123 Cafe Street, Kolkata, India</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉ support@yourcafe.com</p>
+            </div>
+        </div>
+        <div class="fbox">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="visitor-box">
+            <h3>👥 Total Visitors</h3>
+            <p id="visitor-count">0</p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="riterap"> Copyright © 2007-2024 Cafetune. All Rights Reserved </div>
+    </div>
+</div>
+<!-- Footer end-->
+ <!--visitor script-->
+ <script>
+    function animateVisitorCount(start, end, duration) {
+        let current = start;
+        let increment = (end - start) / (duration / 50);
+        let visitorElement = document.getElementById("visitor-count");
+
+        let timer = setInterval(() => {
+            current += increment;
+            visitorElement.textContent = Math.floor(current);
+            if (current >= end) {
+                visitorElement.textContent = end;
+                clearInterval(timer);
+            }
+        }, 50);
+    }
+
+    // Simulated visitor count (Random between 500 to 5000)
+    let randomVisitors = Math.floor(Math.random() * 5000) + 500;
+    animateVisitorCount(0, randomVisitors, 2000); // Animate count in 2 seconds
+</script>
+<!--visitor script end-->
+
+<script>
+    function toggleChat() {
+        let chatContainer = document.getElementById("chatContainer");
+        chatContainer.style.display = (chatContainer.style.display === "flex") ? "none" : "flex";
+    }
+
+    function handleOption(option) {
+        let chatBox = document.getElementById("chatBox");
+        let response = getBotResponse(option);
+        chatBox.innerHTML += `<p><b>You:</b> ${option}</p>`;
+        setTimeout(() => {
+            chatBox.innerHTML += `<p><b>Bot:</b> ${response}</p>`;
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }, 500);
+    }
+
+    function getBotResponse(option) {
+        if (option === 'menu') return "Our menu includes Coffee, Tea, and Snacks!";
+        if (option === 'hours') return "We are open from 8 AM to 10 PM.";
+        if (option === 'location') return "We are located at XYZ Street, Kolkata.";
+        if (option === 'contact') return "You can call us at +91 9876543210.";
+        return "Sorry, I didn't understand that.";
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+    scroll-behavior: smooth;
+}
+.bod{
+    background-color: rgba(104, 233, 169, 0.212);
+    
+}
+#nav{
+    width: 100%;
+    height: 10vh;
+    background-color:rgb(77, 224, 151);
+    position: fixed;
+    z-index: 1000;
+    
+}
+.navrap{
+    width: 90%;
+    margin: auto;
+}
+.navrap ul {
+    float: right;
+}
+.navrap ul li {
+    display: inline;
+}
+.navrap ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black
+}
+.logo h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 8vh;
+}
+.logo{
+    position: absolute;
+}
+.menu ul{
+    margin-top: 40px;
+    font-weight: bold;
+}
+/*search bar*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    margin-right: 53%;
+    padding: 5px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-bar:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+.gallery-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+/* Container for Centering Content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Title and Description */
+.gallery-title {
+    font-size: 36px;
+    color: rgb(104, 233, 168);
+    margin-bottom: 15px;
+}
+
+.gallery-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Gallery Item */
+.gallery-item {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Images */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Images */
+.gallery-item img:hover {
+    transform: scale(1.1);
+}

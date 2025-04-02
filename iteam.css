@@ -1,0 +1,352 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+}
+body{
+    background-color: rgba(104, 233, 169, 0.212);
+    
+}
+#nav{
+    width: 100%;
+    height: 10vh;
+    background-color:rgb(77, 224, 151);
+    
+}
+.navrap{
+    width: 90%;
+    margin: auto;
+}
+.navrap ul {
+    float: right;
+}
+.navrap ul li {
+    display: inline;
+}
+.navrap ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black
+}
+.logo h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 8vh;
+}
+
+.logo{
+    position: absolute;
+}
+.menu ul{
+    margin-top: 40px;
+    font-weight: bold;
+}
+/*search bar*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    margin-right: 53%;
+    padding: 5px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 300px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-bar:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 230px;
+    background: transparent;
+    color: black;
+}
+.search-bar input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-style: italic;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.search-bar button img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+    filter: brightness(0);
+}
+
+.search-bar button:hover {
+    transform: scale(1.1);
+}
+
+/*search bar end*/
+.menu ul li{
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid 2px black;
+    border-radius: 1rem;
+    margin-right: 15px;
+    margin-left: 15px;
+    
+}
+.menu ul li a:hover{
+    color:#FFFDD0;
+}
+.company{
+    position: absolute;
+    border: solid 3px rgb(63, 212, 138);
+    color: rgb(63, 212, 138);
+    font-size: 13vh;
+    margin-left: 35%;
+    margin-top: 20%;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.tag{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 45px;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(63, 212, 138);
+    margin-bottom: 20px;
+    margin-top: 0%;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 50px 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-item {
+    background: rgb(104, 233, 168);
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 75%;
+    border-radius: 8px;
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.menu-item span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+/*chat bot*/
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(104, 233, 168);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+.chat-header {
+    background-color: rgb(104, 233, 168);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.chat-options {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.chat-options button {
+    background-color: rgb(104, 233, 168);
+    color: white;
+    border: none;
+    padding: 8px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*chat bot end*/
+
+
+
+/*footer*/
+.foot{
+    height: 55vh;
+    width: 100%;
+    background-color:rgba(104, 233, 169, 0.836);
+}
+.footrap{
+    height: 55vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 80%;
+    margin: auto;
+}
+.fbox{
+    text-transform: uppercase;
+    padding: 20px;
+}
+.flink{
+    margin-top: 20px;
+}
+.flink li{
+    padding: 10px;
+    padding-left: 0%;
+}
+.cnt p{
+    padding-bottom: 10px;
+}
+.social-icons li{
+    padding-bottom: 10px;
+    list-style: none;
+}
+/*icon navigation*/
+.social-icons ul {
+    list-style: none;
+    padding-left: 30px;
+    gap: 10px;
+}
+
+/*.social-icons li {
+    display: inline-block;
+}*/
+
+.social-icons img {
+    width: 40px;  /* Adjust the size as needed */
+    height: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+/*icon navigation end */ 
+.fbox h3{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.flink li a{
+    text-decoration:none;
+    list-style-type: none;
+    color: black;
+}
+.flink li a:hover{
+    color: #FFFDD0;
+}
+.flink li{
+    text-decoration:none;
+    list-style-type: none;
+}
+
+/*visitor script*/
+.visitor-box {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 250px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+.visitor-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.visitor-box p {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+}
+.right{
+    background-color: rgb(77, 224, 151);
+    height: 50px;
+    width: 100%;
+}
+.riterap {
+    margin-left: 40%;
+    margin-top: 16px;
+    position: absolute;
+    
+}
